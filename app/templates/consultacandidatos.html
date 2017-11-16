@@ -1,0 +1,80 @@
+﻿<div ng-include="'../Templates/Layouts/navbar.html'"></div>
+<section class="consultacandidatos.section consultar" ng-controller="ConsultaCandidatosController">
+    <div class="container">
+        <form>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <div class="col-md-8 form-group left-addon input">
+                        <div class="icon-search">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </div>
+                        <input type="text" class="form-control" id="cadastravagas.cargo" values="cargo" name="cargo" placeholder="Pesquisar Candidatos">
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <button type="submit" id="consultacandidatos.submit" value="consultar" name="consultacandidatos" ng-click="consultar()" class="btn btn-default  btn-consultar">Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<section ng-repeat="candidato in candidatos">
+    <div class="panel">
+        <div class="container">
+            <div class="foto">
+                <div class="col-md-2">
+                    <svg width="100" height="100">
+                        <rect width="100" height="100" style="fill:rgb(255, 171, 122)" />
+                    </svg>
+                </div>
+            </div>
+            <div class="informacao">
+                <div class="col-md-4">
+                    <div class="form-group candidatos">
+                        <div class="col-md-12 form-group cand-nome">
+                            <h5>{{ candidato._source.dados_pessoais.nome }}</h5>
+                        </div>
+                        <div class="col-md-12 form-group cand-prof">
+                            <div class="sourcesize">
+                                <h5>{{ candidato._source.dados_pessoais.profissao }} - {{ candidato._source.dados_pessoais.cargo_atual
+                                    }}
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-md-12 form-group cand-local">
+                            <div class="sourcesize">
+                                <h5> {{ candidato._source.dados_pessoais.localizacao }} </h5>
+                            </div>
+                        </div>
+                        <div class="col-md-12 form-group cand-end">
+                            <a target="_blank" href="{{ candidato._source.dados_pessoais.endereco}}">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                Linkedin
+                            </a>
+                            <a target="_blank" href="{{ candidato._source.dados_pessoais.endereco}}">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                Enviar Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="col-md-12 form-group cand-comp-titulo">
+                            <h5>Competências:</h5>
+                        </div>
+                        <div class="col-md-12 form-group cand-comp-itens">
+                            <div class="sourcesize">
+                                <h5>
+                                    <span ng-repeat="candidato in candidato._source.competencias">
+                                        {{candidato.nome}} - {{candidato.valor}};
+                                    </span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

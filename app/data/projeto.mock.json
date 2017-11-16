@@ -1,0 +1,76 @@
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 3,
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "projetos",
+        "_type": "v1",
+        "_id": "dasa",
+        "_score": 1,
+        "_source": {
+          "nome": "dasa",
+          "cargo": "desenvolvedor c#",
+          "localizacao": "São Paulo,SP",
+          "Setor": "Saúde",
+          "competencias": [
+            {
+              "nome": "c#"
+            },
+            {
+              "nome": "Oracle"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "projetos",
+        "_type": "v1",
+        "_id": "asia",
+        "_score": 1,
+        "_source": {
+          "nome": "asia",
+          "cargo": "analista de BI",
+          "localizacao": "Santos,SP",
+          "Setor": "Logistica",
+          "competencias": [
+            {
+              "nome": "Power BI"
+            },
+            {
+              "nome": "ETL"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "projetos",
+        "_type": "v1",
+        "_id": "unimed",
+        "_score": 1,
+        "_source": {
+          "nome": "unimed",
+          "cargo": "desenvolvedor java",
+          "localizacao": "São Paulo,SP",
+          "Setor": "Saúde",
+          "competencias": [
+            {
+              "nome": "c#"
+            },
+            {
+              "nome": "SQLServer"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
