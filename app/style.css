@@ -133,3 +133,11 @@ a.dropdown-toggle {
 .cand-end a{
     color: #888;
 }
+
+.open {
+    background-color: none;
+}
+
+#navbar > ul > li, #navbar > ul > li > a {
+    background-color: transparent;
+}
