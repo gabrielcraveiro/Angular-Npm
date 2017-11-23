@@ -1,60 +1,101 @@
 ﻿<div ng-include="'../Templates/Layouts/navbar.html'"></div>
 <section class="index.section consultar" ng-controller="IndexController">
-    <div class="container">
-        <form>
-            <div class="col-md-8 col-md-offset-2">
-
-                <div class="form-group">
-                    <div class="col-md-2 form-group">
-                        <button class="btn btn-default">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <input type="text" class="form-control" id="index.cargo" placeholder="Pesquisa Vagas">
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <input type="submit" id="index.submit" value="consultar" name="index" ng-click="consultar()" class="btn btn-default" />
-                    </div>
-                </div>
+  <div class="container">
+    <form>
+      <div class="col-md-8 no-padding">
+        <div class="form-group">
+          <div class="col-md-8 form-group left-addon input no-padding">
+            <div class="icon-search">
+              <i class="glyphicon glyphicon-search"></i>
             </div>
-        </form>
+            <input type="text" class="form-control" id="cadastravagas.cargo" values="cargo" name="cargo" placeholder="Pesquisar Vagas">
+          </div>
+          <div class="col-md-4 form-group">
+            <button type="submit" id="consultacandidatos.submit" value="consultar" name="consultacandidatos" ng-click="consultar()" class="btn btn-default  btn-consultar">Consultar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Opções -->
+<section>
+  <div class="panel">
+    <div class="container">
+      <div class="col-md-8 no-padding opcoes">
+        <ul class="menu-opcoes">
+          <li>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            Deletar
+          </li>
+          <li>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            Salvar
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="panel">
+      <div class="container">
+        <div class="no-padding checkbox checkbox-todos">
+          <i class="fa fa-square-o" aria-hidden="true"></i>
+          <span>Selecionar Todas</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section ng-repeat="vaga in vagas">
-    <div class="panel">
-        <div class="container">
-            <div class="foto">
-                <div class="col-md-2">
-                    <svg width="100" height="100">
-                        <rect width="100" height="100" style="fill:rgb(255, 171, 122)" />
-                    </svg>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="col-md-12 form-group vaga-nome">
-                        {{vaga._source.nome}}
-                    </div>
-                    <div class="col-md-12 form-group vaga-cargo">
-                        {{vaga._source.cargo}} - {{vaga._source.localizacao}}
-                    </div>
-                    <div class="col-md-12 form-group vaga-setor">
-                        {{vaga._source.setor}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                Competências:
-                <div class="form-group">
-                    <div class="col-md-12 form-group vaga-competencias sourcesize">
-                        <span ng-repeat="vaga in vaga._source.competencias">
-                            {{vaga.nome}},
-                        </span>
-                    </div>
-                </div>
-            </div>
+  <div class="panel">
+    <div class="container">
+      <div class="col-md-1 no-padding checkbox">
+        <i class="fa fa-square-o" aria-hidden="true"></i>
+      </div>
+      <div class="foto">
+        <div class="col-md-2">
+          <svg width="100" height="100">
+            <rect width="100" height="100" style="fill:rgb(255, 171, 122)" />
+          </svg>
         </div>
+      </div>
+      <div class="informacao">
+        <div class="col-md-4">
+          <div class="form-group candidatos">
+            <div class="col-md-12 form-group cand-nome">
+              <h5>
+                <a ui-sref="consultacandidatos">{{vaga._source.nome}}</a>
+              </h5>
+            </div>
+            <div class="col-md-12 form-group cand-prof">
+              <div class="sourcesize">
+                <h5> {{vaga._source.cargo}} - {{vaga._source.localizacao}}
+                </h5>
+              </div>
+            </div>
+            <div class="col-md-12 form-group cand-prof">
+              <div class="sourcesize">
+                <h5> Tecnologia
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="col-md-12 form-group cand-comp-itens">
+              Competências:
+              <div class="form-group">
+                <div class="col-md-12 form-group vaga-competencias sourcesize">
+                  <span ng-repeat="vaga in vaga._source.competencias">
+                    {{vaga.nome}},
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </section>

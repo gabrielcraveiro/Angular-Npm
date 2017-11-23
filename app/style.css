@@ -1,143 +1,186 @@
 ﻿* {
-    font-family: "Lato";
-    color: #777;
+  font-family: "Lato";
+  color: #777;
 }
 
 .navbar-default {
-    background-color: rgb(255, 171, 122);
-    border-color: rgb(255, 171, 122);
-    border-radius: 0;
-    height: 60px;
+  background-color: rgb(255, 171, 122);
+  border-color: rgb(255, 171, 122);
+  border-radius: 0;
+  height: 60px;
 }
 
 .form-group {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .form-group .btn btn-default {
-    color: rgb(255, 171, 122);
+  color: rgb(255, 171, 122);
 }
 
 h4,
 h5 {
-    border: none;
-    padding: 0;
-    margin: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sourcesize h5 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .foto .col-md-2 {
-    width: 120px;
-    padding: 0;
+  width: 120px;
+  padding: 0;
 }
 
 .informacao .col-md-4 {
-    padding: 0px;
+  padding: 0px;
 }
 
 .panel {
-    padding: 10px;
+  padding: 10px;
 }
 
 .icon-search {
-    color: #555555;
-    position: absolute;
-    padding: 8px;
-    padding-left: 10px;
+  color: #555555;
+  position: absolute;
+  padding: 8px;
+  padding-left: 10px;
 }
 
 .left-addon input {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .vaga-nome,
 .cand-nome h5 {
-    font-size: 18px;
-    text-transform: capitalize;
-    font-weight: 500;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 .vaga-competencias {
-    padding-left: 0
+  padding-left: 0;
 }
 
 .navbar-logo {
-    height: 30px;
-    margin-top: 0;
-    padding-top: 0
+  height: 30px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .navbar span {
-    color: white;
+  color: white;
 }
 
 a.dropdown-toggle {
-    color: white!important;
+  color: white !important;
 }
 
-.cand-nome {}
+.cand-nome {
+}
 
 .cand-prof {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .candidatos div {
-    margin-left: 0;
-    padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.cand-prof h5,
+.cand-local h5,
+.cand-end h5 {
+  font-size: 14px;
+}
+
+.cand-comp-titulo h5 {
+  font-size: 16px;
+}
+
+.cand-comp-itens h5 {
+  font-size: 13px;
+}
+
+.panel {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.consultar {
+  border: none;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  padding-bottom: 60px;
+}
+
+.btn-consultar {
+  border: 0.5px solid #eee;
+  color: #888;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn-consultar:hover {
+  border: 0.5px solid #bbb;
+  color: #888;
+  background: none;
+}
+
+.cand-local {
+  padding-bottom: 8px;
+}
+
+.cand-end a {
+  color: #888;
+}
+
+.no-padding {
+  padding: 0;
+  margin-left: 0;
+}
+
+.menu-opcoes li, .menu-opcoes {
+  display: inline-block;
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.menu-opcoes i {
+    margin-right: 6px;
+}
+
+.opcoes {
+    border-bottom: 1px solid #ddd;
+}
+
+.checkbox {
+    margin-right: 0;
+    margin-top: 28px;
+    font-size: 25px;
+    padding-right: 0;
+    margin-right: 0;
+    color: #eee;
+}
+
+.checkbox-todos {
     padding-top: 0;
     margin-top: 0;
 }
 
-.cand-prof h5, .cand-local h5, .cand-end h5 {
-    font-size: 14px;
+.checkbox-todos i {
+    position: relative;
+    top: 5px;
 }
 
-.cand-comp-titulo h5 {
+.checkbox-todos span {
     font-size: 16px;
-}
-
-.cand-comp-itens h5 {
-    font-size: 13px;
-}
-
-.panel {
-    border: 0;
-    box-shadow: none;
-}
-
-.consultar {
-    border: none;
-    box-shadow: 0;
-    padding-bottom: 60px;
-}
-
-.btn-consultar {
-    border: 0.5px solid #eee;
-    color: #888;
-    transition: 0.5s;
-}
-
-.btn-consultar:hover {
-    border: 0.5px solid #bbb;
-    color: #888;
-    background: none;
-}
-
-.cand-local {
-    padding-bottom: 8px;
-}
-
-.cand-end a{
-    color: #888;
-}
-
-.open {
-    background-color: none;
-}
-
-#navbar > ul > li, #navbar > ul > li > a {
-    background-color: transparent;
+    margin-left: 10px;
 }
